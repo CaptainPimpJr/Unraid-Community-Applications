@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>BeoRadioScrobbler</Name>
+  <Repository>cptpijun/beo_radio_scrobbler</Repository>
+  <Registry>https://hub.docker.com/repository/docker/cptpijun/beo_radio_scrobbler</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/196117-supportbeo_radio_scrobbler/</Support>
+  <Project>https://github.com/CaptainPimpJr/beo_radio_scrobbler</Project>
+  <ReadMe>https://github.com/CaptainPimpJr/beo_radio_scrobbler/blob/main/README.md</ReadMe>
+  <Overview>Scrobbles Tracks played on a Bang &amp;amp; Olufsen Speaker supporting BeoNetRemote Client API via radio. &#13;
+</Overview>
+  <Category>MediaApp:Music</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://github.com/CaptainPimpJr/beo_radio_scrobbler/blob/main/logo/logo.png</Icon>
+  <ExtraParams>--user 99:100</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1768129688</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="LASTFM_API_KEY" Target="LASTFM_API_KEY" Default="" Mode="" Description="The API key generated on LAST.FM " Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LASTFM_API_SECRET" Target="LASTFM_API_SECRET" Default="" Mode="" Description="The API secret generated on LAST.FM " Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LASTFM_USERNAME" Target="LASTFM_USERNAME" Default="" Mode="" Description="Your LAST.FM username" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="LASTFM_PASSWORD" Target="LASTFM_PASSWORD" Default="" Mode="" Description="Your LAST.FM password. Only stored as an environment variable. Not exposed, getting hashed from library pylast. " Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name=" LOCAL_TIMEZONE" Target=" LOCAL_TIMEZONE" Default="" Mode="" Description="Time zone like 'Europe/Berlin' - will be defaulted to UTC if empty. " Type="Variable" Display="always" Required="false" Mask="false">Europe/Berlin</Config>
+  <Config Name="RUN_MODE" Target="RUN_MODE" Default="" Mode="" Description="See documentation page. Possible values: ['production', 'detect', 'notify_me']. Will default to 'detect' if empty. " Type="Variable" Display="always" Required="false" Mask="false">production</Config>
+  <Config Name="BEO_IP" Target="BEO_IP" Default="" Mode="" Description="IP address of the B&amp;amp;O device, in the format '192.168.1.1'. " Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="appdata" Target="/app/appdata" Default="" Mode="rw" Description="The folder on your system that will contain 'logs' and 'config' folders.&#13;&#10;Most likely: appdata/beoradioscrobbler&#13;&#10;" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/beoradioscrobbler</Config>
+  <Config Name="LOGLEVEL" Target="LOGLEVEL" Default="" Mode="" Description="Log level in general log file. INFO, DEBUG. Defaults to INFO. " Type="Variable" Display="always" Required="false" Mask="false">INFO</Config>
+  <TailscaleStateDir/>
+</Container>
